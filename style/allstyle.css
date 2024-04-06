@@ -1,5 +1,7 @@
  /* all-page */
 /* @import url(../style/login-form-modal.css); */
+@import './_about-member-team.css' ;
+@import '_aboutTelesk.css' ;
 
 *{ 
     box-sizing: border-box;
@@ -155,4 +157,13 @@ i.bi.bi-youtube {
     height: 41px;
     width: 35px;
     padding: 5px 6px;
+}
+
+
+a.dropdown-item {
+    text-align: right;
+}
+
+ul.dropdown-menu.show {
+    right: 4px;
 }

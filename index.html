@@ -15,6 +15,8 @@
     rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
     crossorigin="anonymous">
+ 
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous"> -->
 
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -26,7 +28,7 @@
     <nav class="navbar fixed-top navbar-dark navbar-expand-lg scroll text-white">
       <div class="container-fluid">
         <img src="/img/logo-telesk.png" alt="" width="70px" height="60px">
-        <a class="navbar-brand" href="#">تلسک</a>
+        <span class="navbar-brand">تلسک</span>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,8 +40,15 @@
             <li class="nav-item">
               <a class="nav-link text-white" href="/store.html">فروشگاه</a>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link text-white">درباره ما</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                درباره ما
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./aboutTelesk.html">درباره تلسک</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="./about-team.html">درباره تیم</a></li>
+              </ul>
             </li>
             <li>
               <a href="./contactform.html" class="nav-link text-white">تماس با ما</a>
@@ -48,7 +57,7 @@
 
           <div class="d-flex ai-center js-end">
              <!-- --- شروع ورود به سایت --- -->
-            <a href="" class="btn text-white d-flex" data-bs-toggle="modal" data-bs-target="#login-form" id="login-peson">
+            <a href="./registerPage.html" class="btn text-white d-flex" data-bs-toggle="modal" data-bs-target="#login-form" id="login-peson">
               <div class="d-flex ai-center js-center relative grow-1 justify-content-center align-items-center">
                 <div class="d-flex ml-2 my-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
@@ -56,7 +65,7 @@
                     <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
                   </svg>
                 </div>
-                <div >ورود | ثبت نام</div>
+                <div>ورود | ثبت نام</div>
               </div>
             </a>
             <!-- --- پایان ورود به سایت --- -->
@@ -66,20 +75,20 @@
             </div> -->
             <!-- --- پایان پروفایل ---- -->
             <span class="mx-3 hidden styles_line"></span>
-            <div class="pos-relative d-flex flex-column">
-              <i class="bi bi-cart3 border " id="cart-icon"></i>
+            <div class="pos-relative d-flex flex-column mt-2">
+              <a href="./details.html" class="text-white"><i class="bi bi-cart3 border " id="cart-icon"></i></a>
             </div>
           </div> 
         </div>
       </div>
 
       <!-- cart -->
-    <div class="cart">
+    <!-- <div class="cart">
       <h4 class="cart-title mt-5 pb-3 text-center text-dark">سبد خرید</h4>
-      <!-- content -->
+      // content 
       <div class="cart-content">
 
-          <!-- <div class="cart-box my-3">
+          <div class="cart-box my-3">
               <img src="./img/product/tak/telesk-bluetooth01.jpg" alt="" class="cart-img p-1">
               <div class="detail-box">
                   <div class="cart-product-title text-dark">ماژول بلوتوث</div>
@@ -88,57 +97,22 @@
               </div>
               remove cart
               <i class="bi bi-x-circle-fill cart-remove"></i>
-          </div> -->
+          </div>
       </div>
-      <!-- total -->
+      // total 
       <div class="total mt-1 pt-2">
           <div class="total-title">جمع کل : </div>
           <div class="total-price mx-2">0 تومان</div>
       </div>
-      <!-- buy button  -->
+      // buy button  
       <button type="button" class="btn btn-buy">تایید نهایی خرید</button>
-      <!-- cart close -->
+      // cart close 
       <i class="bi bi-x" id="close-cart"></i>
       <img src="./img/logo-telesk.png" alt="" id="icon-telesk">
-    </div>
+    </div> -->
     </nav>
 
-  <!-- Modal begin-->
-  <div class="modal fade" id="login-form" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header border border-0">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">ورود به سایت</h1>
-          <button type="button" class="btn-close m-lg-0" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">ایمیل</label>
-              <input type="email" class="form-control form-control-sm" id="exampleInputEmail1">
-              <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">کلمه عبور</label>
-              <input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
-            </div>
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">مرا به خاطر بسپار.</label>
-            </div>
-            <button type="submit" class="btn btn-success btn-sm btn-block mt-5">ورود</button>
-          </form>
-        </div>
-        <div class="modal-footer ">
-          <a href="">فراموشی رمز عبور</a>
-          <a href="">عضویت در سایت</a>
-          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--modal end-->
+  
 
   <!--carousel begin-->
   <div id="my-carousel" class="carousel slide">
@@ -495,7 +469,7 @@
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill color_icon" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
                       </svg>
-                      051-55245751
+                      051-55250282
                     </div>
                   </li>
 
@@ -505,7 +479,7 @@
                         <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2H2Zm-2 9.8V4.698l5.803 3.546L0 11.801Zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 9.671V4.697l-5.803 3.546.338.208A4.482 4.482 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671Z"/>
                         <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034v.21Zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791Z"/>
                       </svg>
-                      Telesk@gmail.com
+                      HumminRoboticCo@gmail.com
                     </div>
                   </li>
 
@@ -514,8 +488,8 @@
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill color_icon" viewBox="0 0 16 16">
                         <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
                       </svg>
-                        خراسان رضوی، کاشمر، خیابان آزادگان،
-                        <p id="address"> آزادگان 14، مرکز نوآوری و شتابدهی ترشیز</p>
+                        خراسان رضوی، کاشمر، خیابان امام خمینی
+                        <p id="address"> روبروی پارک کودک ، طبقه بالای نانتاج</p>
                     </div>
                   </li>
 
@@ -551,7 +525,7 @@
                 </svg>
               </a>
 
-                  <p class="pt-3 pb-0"> رضایت مشتری الویت ماست، پس با اطمینان خاطر از ما خرید کنید.</p>
+                  <p class="pt-3 pb-0">Trust the Telesk</p>
               </div>
           </div>
       </div>
@@ -579,7 +553,7 @@
   </script>
 
   <script src="../js/botton-top.js"></script>
-  <script src="./js/store.js"></script>
+  <!-- <script src="./js/store.js"></script> -->
   <!--script end-->
 
 </body>
